@@ -5,6 +5,8 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
     padding: 20px;
+    background-image: url('./images/banner mirror.png');
+    background-size: cover;
 }
 
 .register-box {

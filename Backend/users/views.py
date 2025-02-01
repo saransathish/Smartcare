@@ -25,3 +25,6 @@ class UserDetailsView(APIView):
         user = request.user  # Get the authenticated user
         serializer = UserSerializer(user)  # Serialize the user data
         return Response(serializer.data)
+def gather(request):
+    print(request.question)
+    return "Hello World"
