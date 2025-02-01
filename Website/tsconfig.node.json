@@ -11,8 +11,8 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
-
+    "outDir": "./dist",  // Add output directory
+    
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
