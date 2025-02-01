@@ -397,6 +397,7 @@ import {
   getUserDetails,
   ChatResponse 
 } from '../utils/api';
+import './css/Home.css';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -417,7 +418,10 @@ export const Chatbot: React.FC = () => {
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
-
+  const [isHovered, setIsHovered] = useState(false);
+  const handleChatClick = () => {
+      window.location.href = '/home';
+    };
   // Initialize Web Speech API
   useEffect(() => {
     // @ts-ignore
@@ -742,6 +746,7 @@ export const Chatbot: React.FC = () => {
           ) : (
             <Mic className="w-5 h-5" />
           )}
+          <span>🎙️</span>
         </button>
         <button 
           type="submit" 
@@ -755,6 +760,22 @@ export const Chatbot: React.FC = () => {
           )}
         </button>
       </form>
+    </div>
+    <div className="chat-button-wrapper">
+      <div className="chat-button-ripple"></div>
+      <button 
+        className={`chat-button ${isHovered ? 'hovered' : ''}`}
+        onClick={handleChatClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        aria-label="Open Chat"
+      >
+        <div className="chat-button-inner">
+          <div className="chat-icon"></div>
+          <span className="chat-tooltip">Let's Chat!</span>
+        </div>
+        <div className="chat-button-glow"></div>
+      </button>
     </div>
     </div>
 

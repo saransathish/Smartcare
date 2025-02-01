@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
     return (
         <Router>
-            <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+            {/* <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} /> */}
             <Routes>
                 <Route path="/login" element={<Login onLogin={handleLogin} />} />
                 <Route path="/register" element={<Register />} />
