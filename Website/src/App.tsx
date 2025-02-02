@@ -4,8 +4,6 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
 import Chatbot from './components/Chatbot';
-import Navbar from './components/Navbar';
-import './components/css/Navbar.css';
 
 const App: React.FC = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
